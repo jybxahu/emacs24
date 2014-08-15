@@ -1,0 +1,209 @@
+;; Object AccountCategorization/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "AccountCategorization/"
+  :tables (list 
+   (semanticdb-table "AccountCategorization.java"
+    :major-mode 'jde-mode
+    :tags 
+        '( ("amazon.ec2forecasting.AccountCategorization" package nil nil [2 54])
+            ("java.sql.Date" include nil nil [56 77])
+            ("java.util.Arrays" include nil nil [78 102])
+            ("java.util.Calendar" include nil nil [103 129])
+            ("java.util.LinkedList" include nil nil [130 158])
+            ("java.util.List" include nil nil [159 181])
+            ("java.util.Map" include nil nil [182 203])
+            ("java.util.HashMap" include nil nil [204 229])
+            ("java.util.Set" include nil nil [230 251])
+            ("java.lang.Math" include nil nil [253 275])
+            ("org.apache.commons.math3.stat.regression.SimpleRegression" include nil nil [277 342])
+            ("org.apache.commons.math3.stat.StatUtils" include nil nil [343 390])
+            ("org.apache.log4j.Logger" include nil nil [391 422])
+            ("com.amazon.ec2forecasting.publisher.InstanceAccountCategorizations" include nil nil [424 498])
+            ("com.amazon.ec2forecasting.publisher.InstanceIdentifier" include nil nil [499 561])
+            ("com.amazon.ec2forecasting.publisher.Publisher" include nil nil [562 615])
+            ("com.amazon.ec2forecasting.publisher.PublisherException" include nil nil [616 678])
+            ("com.amazon.ec2forecasting.publisher.RegionAccountCategorizations" include nil nil [679 751])
+            ("amazon.platform.config.AppConfig" include nil nil [753 793])
+            ("amazon.platform.logging.AppConfigLog4jConfigurator" include nil nil [794 852])
+            ("amazon.ec2forecasting.Common.AccountInfo" include nil nil [854 902])
+            ("amazon.ec2forecasting.Common.Constants" include nil nil [903 949])
+            ("amazon.ec2forecasting.Common.DemandDataSeries" include nil nil [950 1003])
+            ("amazon.ec2forecasting.Common.InstanceInfo" include nil nil [1004 1053])
+            ("amazon.ec2forecasting.Utils.DateTimeUtils" include nil nil [1054 1103])
+            ("AccountCategorization" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("log" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [1148 1228])
+                    ("dataLayer" variable
+                       (:typemodifiers ("private" "static")
+                        :type "AccountCategorizationDataLayer")
+                        (reparse-symbol class_member_declaration) [1234 1297])
+                    ("getAccountType" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("" variable (:type "Integer") (reparse-symbol formal_parameters) [1341 1348])
+                            ("" variable (:type "usage") (reparse-symbol formal_parameters) [1359 1364]))                          
+                        :type "AccountType")
+                        (reparse-symbol class_member_declaration) [1303 5413])
+                    ("categorizeAccounts" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "AccountInfo") (reparse-symbol formal_parameters) [5491 5502])
+                            ("" variable (:type "accountUsageData") (reparse-symbol formal_parameters) [5522 5538])
+                            ("" variable (:type "AccountInfo") (reparse-symbol formal_parameters) [5598 5609])
+                            ("" variable (:type "accountOverrides") (reparse-symbol formal_parameters) [5624 5640]))                          )
+                        (reparse-symbol class_member_declaration) [5468 6660])
+                    ("prepareAccountsForPublisher" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("" variable (:type "InstanceInfo") (reparse-symbol formal_parameters) [6759 6771])
+                            ("" variable (:type "spikyAccounts") (reparse-symbol formal_parameters) [6787 6800])
+                            ("region" variable (:type "String") (reparse-symbol formal_parameters) [6802 6815])
+                            ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [6817 6834]))                          
+                        :type "RegionAccountCategorizations")
+                        (reparse-symbol class_member_declaration) [6666 8163])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [8198 8211]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8173 11544]))                  
+                :type "class")
+                nil [1106 11552]))          
+    :file "AccountCategorization.java"
+    :pointmax 11554
+    :fsize 11545
+    :lastmodtime '(21362 36765 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "AccountCategorizationDataLayer.java"
+    :major-mode 'jde-mode
+    :tags 
+        '( ("amazon.ec2forecasting.AccountCategorization" package nil nil [1 53])
+            ("java.util.LinkedList" include nil nil [55 83])
+            ("java.util.List" include nil nil [84 106])
+            ("java.util.Map" include nil nil [107 128])
+            ("java.util.HashMap" include nil nil [129 154])
+            ("java.util.TreeMap" include nil nil [155 180])
+            ("java.sql.Connection" include nil nil [182 209])
+            ("java.sql.Date" include nil nil [210 231])
+            ("java.sql.PreparedStatement" include nil nil [232 266])
+            ("java.sql.Statement" include nil nil [267 293])
+            ("java.sql.ResultSet" include nil nil [294 320])
+            ("java.sql.SQLException" include nil nil [321 350])
+            ("org.apache.log4j.Logger" include nil nil [352 383])
+            ("amazon.ec2forecasting.Common.AccountInfo" include nil nil [385 433])
+            ("amazon.ec2forecasting.Common.Constants" include nil nil [434 480])
+            ("amazon.ec2forecasting.Common.DemandDataSeries" include nil nil [481 534])
+            ("amazon.ec2forecasting.Common.InstanceInfo" include nil nil [535 584])
+            ("amazon.ec2forecasting.Common.SQLRetry" include nil nil [585 630])
+            ("amazon.ec2forecasting.Common.RetrySQLException" include nil nil [631 685])
+            ("amazon.ec2forecasting.DBConnection.DBConnection" include nil nil [686 741])
+            ("AccountCategorizationDataLayer" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("domain" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [794 816])
+                    ("log" variable
+                       (:typemodifiers ("private" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [826 908])
+                    ("AccountCategorizationDataLayer" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("domain" variable (:type "String") (reparse-symbol formal_parameters) [952 965]))                          )
+                        (reparse-symbol class_member_declaration) [914 1004])
+                    ("getInstancesMap" function (:constructor-flag t) (reparse-symbol class_member_declaration) [1064 2355])
+                    ("getAccountUsage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("date" variable (:type "Date") (reparse-symbol formal_parameters) [2658 2667])
+                            ("region" variable (:type "String") (reparse-symbol formal_parameters) [2669 2682])
+                            ("regionId" variable (:type "int") (reparse-symbol formal_parameters) [2684 2696])
+                            ("startTimestamp" variable (:type "int") (reparse-symbol formal_parameters) [2698 2716])
+                            ("weeksLookup" variable (:type "int") (reparse-symbol formal_parameters) [2718 2733])
+                            ("minUsage" variable (:type "int") (reparse-symbol formal_parameters) [2735 2747]))                          )
+                        (reparse-symbol class_member_declaration) [2642 8028])
+                    ("getValidTimestamps" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("date" variable (:type "Date") (reparse-symbol formal_parameters) [8300 8309])
+                            ("region" variable (:type "String") (reparse-symbol formal_parameters) [8311 8324])
+                            ("startTimestamp" variable (:type "int") (reparse-symbol formal_parameters) [8326 8344])
+                            ("weeksLookup" variable (:type "int") (reparse-symbol formal_parameters) [8346 8361]))                          )
+                        (reparse-symbol class_member_declaration) [8281 10450])
+                    ("categorizeLowUsageAccounts" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("runningDate" variable (:type "Date") (reparse-symbol formal_parameters) [10697 10713])
+                            ("sundayDate" variable (:type "Date") (reparse-symbol formal_parameters) [10715 10730])
+                            ("regionId" variable (:type "int") (reparse-symbol formal_parameters) [10732 10744])
+                            ("weeksLookup" variable (:type "int") (reparse-symbol formal_parameters) [10746 10761])
+                            ("minUsage" variable (:type "int") (reparse-symbol formal_parameters) [10763 10775]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10658 13618])
+                    ("appendDormantAccountsCategorization" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("date" variable (:type "Date") (reparse-symbol formal_parameters) [13786 13795])
+                            ("regionId" variable (:type "int") (reparse-symbol formal_parameters) [13797 13809]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13738 15395])
+                    ("saveAccountCategorization" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "AccountInfo") (reparse-symbol formal_parameters) [15593 15604])
+                            ("" variable (:type "accountCategorization") (reparse-symbol formal_parameters) [15619 15640])
+                            ("date" variable (:type "Date") (reparse-symbol formal_parameters) [15684 15693])
+                            ("regionId" variable (:type "int") (reparse-symbol formal_parameters) [15695 15707]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [15551 18161])
+                    ("getCategorizationOverrides" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("region" variable (:type "String") (reparse-symbol formal_parameters) [18325 18338]))                          )
+                        (reparse-symbol class_member_declaration) [18298 20070])
+                    ("getRegionAttribute" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("region" variable (:type "String") (reparse-symbol formal_parameters) [20209 20222]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [20179 20986])
+                    ("getAccountStatistics" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("runningDate" variable (:type "Date") (reparse-symbol formal_parameters) [21088 21104])
+                            ("sundayDate" variable (:type "Date") (reparse-symbol formal_parameters) [21106 21121])
+                            ("region" variable (:type "String") (reparse-symbol formal_parameters) [21123 21136])
+                            ("regionId" variable (:type "int") (reparse-symbol formal_parameters) [21138 21150])
+                            ("weeksLookup" variable (:type "int") (reparse-symbol formal_parameters) [21152 21167])
+                            ("usageThreshold" variable (:type "int") (reparse-symbol formal_parameters) [21181 21199]))                          )
+                        (reparse-symbol class_member_declaration) [21054 25706])
+                    ("getSpikyAccountsForPublishing" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("sundayDate" variable (:type "Date") (reparse-symbol formal_parameters) [25785 25800])
+                            ("regionId" variable (:type "int") (reparse-symbol formal_parameters) [25802 25814]))                          )
+                        (reparse-symbol class_member_declaration) [25755 28149]))                  
+                :type "class")
+                nil [743 28152]))          
+    :file "AccountCategorizationDataLayer.java"
+    :pointmax 28153
+    :fsize 28152
+    :lastmodtime '(21362 36765 0 0)
+    :unmatched-syntax '((RSHIFT 25752 . 25754) (LT 25745 . 25746) (COMMA 25739 . 25740) (PUBLIC 25712 . 25718) (LT 25726 . 25727) (RSHIFT 21051 . 21053) (COMMA 21027 . 21028) (LT 21019 . 21020) (COMMA 21014 . 21015) (PUBLIC 20992 . 20998) (LT 21002 . 21003) (GT 18296 . 18297) (COMMA 18283 . 18284) (IDENTIFIER 18247 . 18256) (PUBLIC 18261 . 18267) (LT 18271 . 18272) (IDENTIFIER 15606 . 15617) (GT 15617 . 15618) (IDENTIFIER 15589 . 15592) (LT 15592 . 15593) (GT 8274 . 8275) (COMMA 8256 . 8257) (IDENTIFIER 8218 . 8227) (PRIVATE 8232 . 8239) (LT 8243 . 8244) (GT 2635 . 2636) (COMMA 2617 . 2618) (IDENTIFIER 2581 . 2590) (PUBLIC 2595 . 2601) (LT 2605 . 2606) (GT 1062 . 1063) (COMMA 1048 . 1049) (IDENTIFIER 1010 . 1019) (PUBLIC 1024 . 1030) (LT 1040 . 1041))
+    )
+   )
+  :file "!rhel5pdi!workplace!yiboj!AWSForecasting!src!EC2DemandForecasting!src!amazon!ec2forecasting!AccountCategorization!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

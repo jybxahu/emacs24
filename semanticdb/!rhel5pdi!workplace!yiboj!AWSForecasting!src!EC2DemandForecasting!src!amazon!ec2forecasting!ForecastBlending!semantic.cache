@@ -1,0 +1,506 @@
+;; Object ForecastBlending/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ForecastBlending/"
+  :tables (list 
+   (semanticdb-table "ForecastBlending.java"
+    :major-mode 'jde-mode
+    :tags 
+        '( ("amazon.ec2forecasting.ForecastBlending" package nil nil [1 48])
+            ("java.sql.Connection" include nil nil [50 77])
+            ("java.sql.Date" include nil nil [78 99])
+            ("java.sql.PreparedStatement" include nil nil [100 134])
+            ("java.sql.ResultSet" include nil nil [135 161])
+            ("java.sql.SQLException" include nil nil [162 191])
+            ("amazon.ec2forecasting.Common.Constants" include nil nil [193 239])
+            ("amazon.ec2forecasting.Common.Location" include nil nil [240 285])
+            ("amazon.ec2forecasting.Common.RetrySQLException" include nil nil [286 340])
+            ("amazon.ec2forecasting.Common.SQLRetry" include nil nil [341 386])
+            ("amazon.ec2forecasting.Common.Scenario" include nil nil [387 432])
+            ("amazon.ec2forecasting.DBConnection.DBConnection" include nil nil [433 488])
+            ("amazon.ec2forecasting.DemandForecasting.DemandForecastingData" include nil nil [489 558])
+            ("amazon.ec2forecasting.DemandForecasting.DemandForecastingInputData" include nil nil [559 633])
+            ("amazon.ec2forecasting.DemandForecasting.EC2Saver" include nil nil [634 690])
+            ("amazon.ec2forecasting.DemandForecasting.ForecastType" include nil nil [691 751])
+            ("amazon.ec2forecasting.DemandForecasting.Saver" include nil nil [752 805])
+            ("amazon.ec2forecasting.DemandForecasting.EnsembleForecast.NullSaver" include nil nil [806 880])
+            ("amazon.ec2forecasting.ForecastSmoothing.ForecastSmoothing" include nil nil [881 946])
+            ("amazon.ec2forecasting.ForecastSmoothing.ForecastSmoothingForecast" include nil nil [947 1020])
+            ("amazon.ec2forecasting.FutureOutOfBand.EC2FutureOutOfBand" include nil nil [1021 1085])
+            ("amazon.ec2forecasting.FutureOutOfBand.FutureOutOfBandCalculator" include nil nil [1086 1157])
+            ("amazon.ec2forecasting.FutureOutOfBand.FutureOutOfBand" include nil nil [1158 1219])
+            ("amazon.ec2forecasting.FutureOutOfBand.FutureOutOfBandDataProvider" include nil nil [1220 1293])
+            ("amazon.ec2forecasting.FutureOutOfBand.FutureOutOfBandResult" include nil nil [1294 1361])
+            ("amazon.ec2forecasting.FutureOutOfBand.FutureOutOfBandResultPoint" include nil nil [1362 1434])
+            ("amazon.ec2forecasting.Utils.DateTimeUtils" include nil nil [1435 1484])
+            ("org.apache.log4j.Logger" include nil nil [1486 1517])
+            ("com.amazon.ec2forecasting.publisher.Publisher" include nil nil [1519 1572])
+            ("com.amazon.ec2forecasting.publisher.PublisherAZMidTermFamilyForecast" include nil nil [1573 1649])
+            ("com.amazon.ec2forecasting.publisher.PublisherAZMidTermFamilyForecastPoint" include nil nil [1650 1731])
+            ("com.amazon.ec2forecasting.publisher.PublisherAZMidTermInstanceForecast" include nil nil [1732 1810])
+            ("com.amazon.ec2forecasting.publisher.PublisherAZMidTermInstanceForecastPoint" include nil nil [1811 1894])
+            ("com.amazon.ec2forecasting.publisher.PublisherException" include nil nil [1895 1957])
+            ("amazon.platform.config.AppConfig" include nil nil [1959 1999])
+            ("amazon.platform.logging.AppConfigLog4jConfigurator" include nil nil [2000 2058])
+            ("java.util.ArrayList" include nil nil [2060 2087])
+            ("java.util.Iterator" include nil nil [2088 2114])
+            ("java.util.List" include nil nil [2115 2137])
+            ("java.util.Map" include nil nil [2138 2159])
+            ("java.util.HashMap" include nil nil [2160 2185])
+            ("java.util.TreeMap" include nil nil [2186 2211])
+            ("java.util.Map.Entry" include nil nil [2212 2239])
+            ("javax.mail.*" include nil nil [2241 2261])
+            ("javax.mail.internet.*" include nil nil [2262 2291])
+            ("java.util.Properties" include nil nil [2293 2321])
+            ("lombok.AllArgsConstructor" include nil nil [2323 2356])
+            ("lombok.Data" include nil nil [2357 2376])
+            ("lombok.EqualsAndHashCode" include nil nil [2377 2409])
+            ("lombok.NoArgsConstructor" include nil nil [2410 2442])
+            ("lombok.NonNull" include nil nil [2443 2465])
+            ("lombok.RequiredArgsConstructor" include nil nil [2466 2504])
+            ("lombok.ToString" include nil nil [2505 2528])
+            ("ForecastBlending" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("connection" variable
+                       (:typemodifiers ("private")
+                        :type "Connection")
+                        (reparse-symbol class_member_declaration) [2612 2642])
+                    ("log" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [2648 2723])
+                    ("dataLayer" variable
+                       (:typemodifiers ("private")
+                        :type "DemandForecastingData")
+                        (reparse-symbol class_member_declaration) [2746 2786])
+                    ("scenario" variable
+                       (:typemodifiers ("private")
+                        :type "Scenario")
+                        (reparse-symbol class_member_declaration) [2808 2834])
+                    ("snapshotDate" variable
+                       (:typemodifiers ("private")
+                        :type "Date")
+                        (reparse-symbol class_member_declaration) [2852 2878])
+                    ("save" variable
+                       (:typemodifiers ("private")
+                        :type "Boolean")
+                        (reparse-symbol class_member_declaration) [2896 2917])
+                    ("email" variable
+                       (:typemodifiers ("private")
+                        :type "Boolean")
+                        (reparse-symbol class_member_declaration) [2935 2957])
+                    ("futureOutOfBandDataProvider" variable
+                       (:typemodifiers ("private")
+                        :type "FutureOutOfBandDataProvider")
+                        (reparse-symbol class_member_declaration) [2975 3039])
+                    ("blendForecasts" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("expectedHosts" variable (:type "String") (reparse-symbol formal_parameters) [3571 3591]))                          )
+                        (reparse-symbol class_member_declaration) [3556 4102])
+                    ("smoothForecasts" function
+                       (:arguments 
+                          ( ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [4150 4168])
+                            ("" variable (:type "ForecastValue") (reparse-symbol formal_parameters) [4174 4187])
+                            ("" variable (:type "blendedForecasts") (reparse-symbol formal_parameters) [4216 4232])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [4247 4266])
+                            ("expectedHosts" variable (:type "String") (reparse-symbol formal_parameters) [4268 4288]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4112 5079])
+                    ("calculateBlendedForecasts" function
+                       (:arguments 
+                          ( ("confidenceLevel" variable (:type "String") (reparse-symbol formal_parameters) [5123 5145])
+                            ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [5164 5182])
+                            ("" variable (:type "ForecastValue") (reparse-symbol formal_parameters) [5188 5201])
+                            ("" variable (:type "blendedForecasts") (reparse-symbol formal_parameters) [5230 5246])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [5258 5264])
+                            ("" variable (:type "familyForecastSet") (reparse-symbol formal_parameters) [5279 5296])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [5314 5320])
+                            ("" variable (:type "familySafetyStocks") (reparse-symbol formal_parameters) [5331 5349]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5092 7481])
+                    ("loadConfidenceMaps" function (:type "void") (reparse-symbol class_member_declaration) [7487 8394])
+                    ("getPredictionInterval" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("confidenceLevel" variable (:type "String") (reparse-symbol formal_parameters) [8956 8978]))                          )
+                        (reparse-symbol class_member_declaration) [8934 9129])
+                    ("getConfidenceLevel" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("predictionInterval" variable (:type "Double") (reparse-symbol formal_parameters) [9175 9200]))                          )
+                        (reparse-symbol class_member_declaration) [9156 9369])
+                    ("calculateSmoothedForecasts" function
+                       (:arguments 
+                          ( ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [9428 9446])
+                            ("" variable (:type "ForecastValue") (reparse-symbol formal_parameters) [9452 9465])
+                            ("" variable (:type "blendedForecasts") (reparse-symbol formal_parameters) [9494 9510])
+                            ("blendingConfiguration" variable (:type "ForecastBlendingConfiguration") (reparse-symbol formal_parameters) [9518 9569])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [9581 9587])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [9593 9599])
+                            ("" variable (:type "shiftedHistoricalSmoothedPI50Set") (reparse-symbol formal_parameters) [9628 9660])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [9672 9678])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [9684 9690])
+                            ("" variable (:type "offsetLiftMap") (reparse-symbol formal_parameters) [9707 9720])
+                            ("expectedHosts" variable (:type "String") (reparse-symbol formal_parameters) [9728 9748])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [9750 9769]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9379 13190])
+                    ("getBlendedForecasts" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "String") (reparse-symbol formal_parameters) [13304 13310])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [13316 13322])
+                            ("" variable (:type "familyForecastConfidenceLevelSet") (reparse-symbol formal_parameters) [13338 13370])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [13400 13406])
+                            ("" variable (:type "familySafetyStocks") (reparse-symbol formal_parameters) [13417 13435]))                          )
+                        (reparse-symbol class_member_declaration) [13280 14159])
+                    ("calculateLift" function
+                       (:arguments 
+                          ( ("forecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [14195 14228])
+                            ("forecastPI50" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [14230 14267]))                          
+                        :type "double[]")
+                        (reparse-symbol class_member_declaration) [14172 14560])
+                    ("getForecastHorizon" function
+                       (:arguments 
+                          ( ("range" variable (:type "String") (reparse-symbol formal_parameters) [14593 14605]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [14570 14852])
+                    ("adjustForecastMinLift" function
+                       (:arguments 
+                          ( ("bufferedForecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [15014 15055])
+                            ("baseForecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [15094 15131])
+                            ("capacityBuffer" variable (:type "Double") (reparse-symbol formal_parameters) [15170 15191]))                          
+                        :type "ForecastBlendingForecast")
+                        (reparse-symbol class_member_declaration) [14967 15767])
+                    ("loadForecastBlendingConfiguration" function (:type "ForecastBlendingConfiguration") (reparse-symbol class_member_declaration) [15773 17676])
+                    ("getForecastedSafetyStocks" function (:constructor-flag t) (reparse-symbol class_member_declaration) [17703 19031])
+                    ("loadRawForecasts" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [19101 19118])
+                            ("expectedHosts" variable (:type "String") (reparse-symbol formal_parameters) [19120 19140])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [19142 19159]))                          )
+                        (reparse-symbol class_member_declaration) [19084 22540])
+                    ("loadOffsetLift" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [22605 22622])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [22624 22641])
+                            ("expectedHosts" variable (:type "String") (reparse-symbol formal_parameters) [22643 22663])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [22665 22684]))                          )
+                        (reparse-symbol class_member_declaration) [22590 24626])
+                    ("loadShiftedHistoricalSmoothedPI50Forecast" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [24733 24750])
+                            ("weekOffset" variable (:type "int") (reparse-symbol formal_parameters) [24752 24766])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [24768 24785])
+                            ("expectedHosts" variable (:type "String") (reparse-symbol formal_parameters) [24787 24807])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [24815 24834]))                          )
+                        (reparse-symbol class_member_declaration) [24691 27339])
+                    ("loadHistoricalBlendedForecast" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [27431 27448])
+                            ("weekOffset" variable (:type "int") (reparse-symbol formal_parameters) [27450 27464])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [27466 27483]))                          )
+                        (reparse-symbol class_member_declaration) [27401 30859])
+                    ("sendEmail" function
+                       (:arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [30885 30902])
+                            ("region" variable (:type "String") (reparse-symbol formal_parameters) [30904 30917])
+                            ("summary" variable (:type "String") (reparse-symbol formal_parameters) [30919 30933]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [30870 32120])
+                    ("calculateAllocationBuffer" function
+                       (:arguments 
+                          ( ("blendedForecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [32159 32199])
+                            ("safetyStock" variable (:type "Integer") (reparse-symbol formal_parameters) [32213 32232]))                          
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [32126 32438])
+                    ("calculateBufferedForecast" function
+                       (:arguments 
+                          ( ("blendedForecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [32499 32539])
+                            ("allocationBuffer" variable (:type "double") (reparse-symbol formal_parameters) [32553 32576]))                          
+                        :type "ForecastBlendingForecast")
+                        (reparse-symbol class_member_declaration) [32448 32965])
+                    ("calculateBlendedForecast" function
+                       (:arguments 
+                          ( ("forecastMap" variable (:type "ForecastMap") (reparse-symbol formal_parameters) [33021 33044]))                          
+                        :type "ForecastBlendingForecast")
+                        (reparse-symbol class_member_declaration) [32971 36996])
+                    ("saveBlendedForecast" function
+                       (:arguments 
+                          ( ("expectedHosts" variable (:type "String") (reparse-symbol formal_parameters) [37031 37051])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [37053 37072])
+                            ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [37114 37132])
+                            ("" variable (:type "ForecastValue") (reparse-symbol formal_parameters) [37138 37151])
+                            ("" variable (:type "blendedForecasts") (reparse-symbol formal_parameters) [37180 37196]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [37006 39609])
+                    ("saveForecastWithFOOB" function
+                       (:arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [39641 39658])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [39660 39677])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [39679 39698])
+                            ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [39716 39734])
+                            ("" variable (:type "resultForecasts") (reparse-symbol formal_parameters) [39759 39774]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [39615 43024])
+                    ("saveFOOBBreakdown" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [43061 43078])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [43080 43097])
+                            ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [43106 43124])
+                            ("" variable (:type "foobResults") (reparse-symbol formal_parameters) [43149 43160]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [43030 45750])
+                    ("mergeT1IntoM1" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [45887 45905])
+                            ("" variable (:type "resultForecasts") (reparse-symbol formal_parameters) [45930 45945]))                          )
+                        (reparse-symbol class_member_declaration) [45865 46841])
+                    ("loadForecast" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [46915 46932])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [46934 46951])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [46953 46972]))                          )
+                        (reparse-symbol class_member_declaration) [46902 48158])
+                    ("initializeBlendedForecast" function
+                       (:constructor-flag t
+                        :throws ("SQLException")
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [48244 48261])
+                            ("rs" variable (:type "ResultSet") (reparse-symbol formal_parameters) [48263 48275]))                          )
+                        (reparse-symbol class_member_declaration) [48214 48787])
+                    ("addBlendedForecastValue" function
+                       (:throws ("SQLException")
+                        :arguments 
+                          ( ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [48840 48858])
+                            ("" variable (:type "forecasts") (reparse-symbol formal_parameters) [48886 48895])
+                            ("forecastDescriptor" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [48909 48946])
+                            ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [48960 48977])
+                            ("rs" variable (:type "ResultSet") (reparse-symbol formal_parameters) [48979 48991]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [48794 49755])
+                    ("loadAZForecasts" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [49833 49850])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [49852 49869])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [49871 49890]))                          )
+                        (reparse-symbol class_member_declaration) [49817 52039])
+                    ("loadInitialPoolForecastRolledToAZ" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [52117 52134])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [52136 52153]))                          )
+                        (reparse-symbol class_member_declaration) [52083 53712])
+                    ("initializeInitialAZForecast" function
+                       (:constructor-flag t
+                        :throws ("SQLException")
+                        :arguments 
+                          ( ("rs" variable (:type "ResultSet") (reparse-symbol formal_parameters) [53781 53793]))                          )
+                        (reparse-symbol class_member_declaration) [53749 54623])
+                    ("loadGrowthPoolForecastRolledToAZ" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [54700 54717])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [54719 54736]))                          )
+                        (reparse-symbol class_member_declaration) [54667 57730])
+                    ("initializeGrowthByAZ" function
+                       (:constructor-flag t
+                        :throws ("SQLException")
+                        :arguments 
+                          ( ("rs" variable (:type "ResultSet") (reparse-symbol formal_parameters) [57799 57811]))                          )
+                        (reparse-symbol class_member_declaration) [57774 58700])
+                    ("calculateAZLevelForecastByFamily" function
+                       (:arguments 
+                          ( ("" variable (:type "String") (reparse-symbol formal_parameters) [58758 58764])
+                            ("" variable (:type "poolForecastRolledToAZFamilySet") (reparse-symbol formal_parameters) [58774 58805])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [58820 58826])
+                            ("" variable (:type "poolGrowthAZFamilySet") (reparse-symbol formal_parameters) [58836 58857])
+                            ("forecastDescriptor" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [58868 58905])
+                            ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [58920 58938])
+                            ("" variable (:type "internalAZForecastMap") (reparse-symbol formal_parameters) [58966 58987])
+                            ("familyForecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [58998 59037]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [58706 60408])
+                    ("calculateAZLevelForecastByAZ" function
+                       (:arguments 
+                          ( ("familyForecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [60445 60484])
+                            ("initialPoolRolledToRegion" variable (:type "double") (reparse-symbol formal_parameters) [60489 60521])
+                            ("growthPoolRolledToRegion" variable (:type "double") (reparse-symbol formal_parameters) [60523 60554])
+                            ("poolForecastRolledToAZ" variable (:type "double") (reparse-symbol formal_parameters) [60559 60588])
+                            ("growthPoolRolledToAZ" variable (:type "double") (reparse-symbol formal_parameters) [60590 60617])
+                            ("forecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [60622 60655]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [60411 61153])
+                    ("saveAZLevelForecastWithFOOB" function
+                       (:throws ("SQLException")
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [61206 61223])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [61225 61242])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [61244 61263])
+                            ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [61281 61299])
+                            ("" variable (:type "resultForecasts") (reparse-symbol formal_parameters) [61324 61339]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [61160 63104])
+                    ("saveAZLevelForecast" function
+                       (:throws ("SQLException")
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [63135 63152])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [63154 63171])
+                            ("forecastType" variable (:type "String") (reparse-symbol formal_parameters) [63173 63192])
+                            ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [63201 63219])
+                            ("" variable (:type "forecasts") (reparse-symbol formal_parameters) [63247 63256]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [63106 64913])
+                    ("internalAZForecasts" function
+                       (:arguments 
+                          ( ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [64965 64983])
+                            ("" variable (:type "regionalForecasts") (reparse-symbol formal_parameters) [65011 65028])
+                            ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [65042 65059])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [65061 65078])
+                            ("save" variable (:type "Boolean") (reparse-symbol formal_parameters) [65080 65092]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [64923 66173])
+                    ("findFamilyForecastPoint" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "points") (reparse-symbol formal_parameters) [66297 66303])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [66311 66324]))                          
+                        :type "PublisherAZMidTermFamilyForecastPoint")
+                        (reparse-symbol class_member_declaration) [66183 66518])
+                    ("publishAZFamilyForecast" function
+                       (:throws ("PublisherException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [66562 66579])
+                            ("scenario" variable (:type "Scenario") (reparse-symbol formal_parameters) [66584 66601])
+                            ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [66610 66628])
+                            ("" variable (:type "resultForecasts") (reparse-symbol formal_parameters) [66653 66668]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [66521 69836])
+                    ("findInstanceForecastPoint" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "points") (reparse-symbol formal_parameters) [69970 69976])
+                            ("instanceType" variable (:type "String") (reparse-symbol formal_parameters) [69978 69997])
+                            ("os" variable (:type "String") (reparse-symbol formal_parameters) [70005 70014])
+                            ("addressing" variable (:type "String") (reparse-symbol formal_parameters) [70016 70033])
+                            ("hypervisor" variable (:type "String") (reparse-symbol formal_parameters) [70035 70052])
+                            ("tenancy" variable (:type "String") (reparse-symbol formal_parameters) [70054 70068])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [70070 70083])
+                            ("ephemeral" variable (:type "String") (reparse-symbol formal_parameters) [70085 70101]))                          
+                        :type "PublisherAZMidTermInstanceForecastPoint")
+                        (reparse-symbol class_member_declaration) [69843 70577])
+                    ("populateForecastPublishContainer" function
+                       (:arguments 
+                          ( ("" variable (:type "String") (reparse-symbol formal_parameters) [70629 70635])
+                            ("" variable (:type "container") (reparse-symbol formal_parameters) [70673 70682])
+                            ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [70690 70707])
+                            ("region" variable (:type "String") (reparse-symbol formal_parameters) [70709 70722]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [70587 75704])
+                    ("populateForecastPublishContainer" function
+                       (:throws ("SQLException")
+                        :arguments 
+                          ( ("" variable (:type "String") (reparse-symbol formal_parameters) [75756 75762])
+                            ("" variable (:type "container") (reparse-symbol formal_parameters) [75800 75809])
+                            ("snapshotDate" variable (:type "Date") (reparse-symbol formal_parameters) [75817 75834])
+                            ("region" variable (:type "String") (reparse-symbol formal_parameters) [75836 75849])
+                            ("rs" variable (:type "ResultSet") (reparse-symbol formal_parameters) [75851 75863]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [75714 78911])
+                    ("publishAZInstanceForecast" function
+                       (:throws ("PublisherException")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [78914 79389])
+                    ("calculateAZLevelForecast" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [79482 79500])
+                            ("" variable (:type "confidenceLevelFamilyBlendedForecastMap") (reparse-symbol formal_parameters) [79528 79567])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [79576 79582])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [79588 79594])
+                            ("" variable (:type "initialPoolForecastRolledToAZSet") (reparse-symbol formal_parameters) [79605 79637])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [79646 79652])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [79658 79664])
+                            ("" variable (:type "growthPoolForecastRolledToAZSet") (reparse-symbol formal_parameters) [79675 79706]))                          )
+                        (reparse-symbol class_member_declaration) [79443 80642])
+                    ("calculateEffectiveSmoothing" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [80756 80774])
+                            ("" variable (:type "ForecastValue") (reparse-symbol formal_parameters) [80780 80793])
+                            ("" variable (:type "blendedForecasts") (reparse-symbol formal_parameters) [80822 80838]))                          )
+                        (reparse-symbol class_member_declaration) [80711 82914])
+                    ("applyFamilyFutureOutOfBands" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [82978 82996])
+                            ("" variable (:type "ForecastValue") (reparse-symbol formal_parameters) [83002 83015])
+                            ("" variable (:type "blendedForecasts") (reparse-symbol formal_parameters) [83044 83060]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [82920 84607])
+                    ("applyAZsFutureOutOfBands" function
+                       (:typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [84614 86579])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [86610 86623]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [86585 89922]))                  
+                :type "class")
+                nil [2561 89924])
+            ("ForecastDescriptor" type
+               (:members 
+                  ( ("confidenceLevel" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [90031 90062])
+                    ("family" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [90067 90089])
+                    ("internalAz" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [90094 90120])
+                    ("ForecastDescriptor" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("confidenceLevel" variable (:type "String") (reparse-symbol formal_parameters) [90156 90178])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [90180 90193]))                          )
+                        (reparse-symbol class_member_declaration) [90130 90280])
+                    ("ForecastDescriptor" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("parent" variable (:type "ForecastDescriptor") (reparse-symbol formal_parameters) [90312 90337])
+                            ("internalAz" variable (:type "String") (reparse-symbol formal_parameters) [90339 90356]))                          )
+                        (reparse-symbol class_member_declaration) [90286 90495]))                  
+                :type "class")
+                nil [90000 90497]))          
+    :file "ForecastBlending.java"
+    :pointmax 90498
+    :fsize 90500
+    :lastmodtime '(21362 36765 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!rhel5pdi!workplace!yiboj!AWSForecasting!src!EC2DemandForecasting!src!amazon!ec2forecasting!ForecastBlending!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

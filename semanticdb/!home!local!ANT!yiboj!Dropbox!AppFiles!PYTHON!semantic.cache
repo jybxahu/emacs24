@@ -1,0 +1,33 @@
+;; Object PYTHON/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "PYTHON/"
+  :tables (list 
+   (semanticdb-table "FAAS_MAPE.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("pandas" include nil nil [32 51])
+            ("f" variable nil nil [52 111])
+            ("az" variable nil nil [112 123])
+            ("family" variable nil nil [124 139])
+            ("faas_mape" variable nil nil [140 158])
+            ("wk" variable nil nil [159 170])
+            ("week_dict" variable nil nil [171 189])
+            ("for" code nil nil [190 761])
+            ("f" code nil nil [761 770])
+            ("d" variable nil nil [771 832])
+            ("df_faas" variable nil nil [833 858])
+            ("df_prod" variable nil nil [859 964])
+            ("df_prod" code nil nil [965 1092])
+            ("df_c" variable nil nil [1093 1231])
+            ("df_c" code nil nil [1232 1321]))          
+    :file "FAAS_MAPE.py"
+    :pointmax 1322
+    :fsize 1321
+    :lastmodtime '(21484 60109 561323 957000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!local!ANT!yiboj!Dropbox!AppFiles!PYTHON!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

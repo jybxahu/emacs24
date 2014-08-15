@@ -1,0 +1,95 @@
+;; Object ForecastSmoothing/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ForecastSmoothing/"
+  :tables (list 
+   (semanticdb-table "ForecastSmoothing.java"
+    :major-mode 'jde-mode
+    :tags 
+        '( ("amazon.ec2forecasting.ForecastSmoothing" package nil nil [1 49])
+            ("java.sql.Date" include nil nil [51 72])
+            ("org.apache.log4j.Logger" include nil nil [74 105])
+            ("amazon.ec2forecasting.ForecastBlending.ForecastBlendingForecast" include nil nil [107 178])
+            ("amazon.ec2forecasting.ForecastBlending.ForecastBlending" include nil nil [179 242])
+            ("amazon.ec2forecasting.DemandForecasting.Saver" include nil nil [243 296])
+            ("amazon.ec2forecasting.ForecastSmoothing.ForecastSmoothingForecast" include nil nil [297 370])
+            ("ForecastSmoothing" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("log" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [411 487])
+                    ("smoothingSaver" variable
+                       (:typemodifiers ("private")
+                        :type "Saver")
+                        (reparse-symbol class_member_declaration) [497 526])
+                    ("increaseFactor" variable
+                       (:typemodifiers ("private")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [531 561])
+                    ("decreaseFactor" variable
+                       (:typemodifiers ("private")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [566 596])
+                    ("ForecastSmoothing" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("increaseFactor" variable (:type "double") (reparse-symbol formal_parameters) [625 646])
+                            ("decreaseFactor" variable (:type "double") (reparse-symbol formal_parameters) [648 669])
+                            ("smoothingSaver" variable (:type "Saver") (reparse-symbol formal_parameters) [671 691]))                          )
+                        (reparse-symbol class_member_declaration) [600 818])
+                    ("calculateSmoothedForecast" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("thisForecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [885 922])
+                            ("lastForecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [924 961])
+                            ("forecastWeeks" variable (:type "int") (reparse-symbol formal_parameters) [969 986]))                          
+                        :type "ForecastSmoothingForecast")
+                        (reparse-symbol class_member_declaration) [825 1878])
+                    ("shiftForecast" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("forecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [1935 1968])
+                            ("offset" variable (:type "Integer") (reparse-symbol formal_parameters) [1970 1984])
+                            ("forecastWeeks" variable (:type "int") (reparse-symbol formal_parameters) [1986 2003]))                          
+                        :type "ForecastBlendingForecast")
+                        (reparse-symbol class_member_declaration) [1888 3186])
+                    ("smoothForecast" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("forecast" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [3245 3278])
+                            ("forecastPI50" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [3280 3317])
+                            ("lift" variable
+                               (:dereference 1
+                                :type "double")
+                                (reparse-symbol formal_parameters) [3319 3332])
+                            ("lastWeekPI50Smoothed" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [3337 3382])
+                            ("offsetLift" variable
+                               (:dereference 1
+                                :type "double")
+                                (reparse-symbol formal_parameters) [3384 3403])
+                            ("smoothingLiftResult" variable (:type "ForecastBlendingForecast") (reparse-symbol formal_parameters) [3408 3452])
+                            ("predictionInterval" variable (:type "double") (reparse-symbol formal_parameters) [3457 3482])
+                            ("forecastWeeks" variable (:type "int") (reparse-symbol formal_parameters) [3484 3501])
+                            ("forecastHorizon" variable (:type "int") (reparse-symbol formal_parameters) [3503 3522]))                          
+                        :type "ForecastSmoothingForecast")
+                        (reparse-symbol class_member_declaration) [3197 6480]))                  
+                :type "class")
+                nil [372 6482]))          
+    :file "ForecastSmoothing.java"
+    :pointmax 6483
+    :fsize 6482
+    :lastmodtime '(21246 53219 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ForecastSmoothingForecast.java"
+    :file "ForecastSmoothingForecast.java"
+    :fsize 312
+    :lastmodtime '(21246 53219 0 0)
+    )
+   )
+  :file "!rhel5pdi!workplace!yiboj!AWSForecasting!src!EC2DemandForecasting!src!amazon!ec2forecasting!ForecastSmoothing!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

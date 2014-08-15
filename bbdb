@@ -1,0 +1,10 @@
+;; -*- mode: Emacs-Lisp; coding: utf-8; -*-
+;;; file-format: 7
+["Charles" "Cary" nil nil ("Amazon") nil nil ("charcary@amazon.com") ((creation-date . "2014-02-12 01:51:49 +0000") (timestamp . "2014-02-12 01:51:49 +0000")) nil]
+["Toby" "Ehrenkranz" nil nil ("Amazon") nil nil ("tobyeh@amazon.com") ((creation-date . "2014-02-12 01:50:41 +0000") (timestamp . "2014-02-12 01:50:41 +0000")) nil]
+["Shubham" "Katiyar" nil nil ("amazon") nil nil ("shubham@amazon.com") ((creation-date . "2014-02-28 02:00:45 +0000") (timestamp . "2014-02-28 02:00:45 +0000")) nil]
+["Xiao" "Li" nil nil ("Amazon") nil nil ("xiaoli@amazon.com") ((creation-date . "2014-02-12 01:45:53 +0000") (timestamp . "2014-02-12 01:45:53 +0000")) nil]
+["Kostiantyn" "Skiba" nil nil ("Amazon") nil nil ("kskiba@amazon.com") ((creation-date . "2014-02-12 01:52:35 +0000") (timestamp . "2014-02-12 01:52:35 +0000")) nil]
+["Ben" "Skrainka" nil nil ("Amazon") nil nil ("skrainka@amazon.com") ((creation-date . "2014-02-12 01:49:33 +0000") (timestamp . "2014-02-12 01:49:33 +0000")) nil]
+["Ivan" "Stojic" nil nil ("Amazon") nil nil ("ivanst@amazon.com") ((creation-date . "2014-02-12 01:51:18 +0000") (timestamp . "2014-02-12 01:51:18 +0000")) nil]
+["Tianjie" "Wei" nil nil ("Amazon") nil nil ("tianjiew@amazon.com") ((creation-date . "2014-02-12 01:53:17 +0000") (timestamp . "2014-02-12 01:53:17 +0000")) nil]

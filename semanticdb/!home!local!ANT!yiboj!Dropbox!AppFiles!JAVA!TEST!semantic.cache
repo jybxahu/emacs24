@@ -1,0 +1,91 @@
+;; Object TEST/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "TEST/"
+  :tables (list 
+   (semanticdb-table "DataStructure.java"
+    :major-mode 'jde-mode
+    :tags 
+        '( ("DataStructure" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("SIZE" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1662 1697])
+                    ("arrayOfInts" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1702 1744])
+                    ("size" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1749 1795])
+                    ("DataStructure" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [1801 1970])
+                    ("printEven" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1981 2275])
+                    ("getEvenIterator" function
+                       (:typemodifiers ("public")
+                        :type "DataStructureIterator")
+                        (reparse-symbol class_member_declaration) [2285 2370])
+                    ("EvenIterator" type
+                       (:typemodifiers ("private")
+                        :interfaces ("DataStructureIterator")
+                        :members 
+                          ( ("nextIndex" variable
+                               (:typemodifiers ("private")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [2724 2750])
+                            ("hasNext" function
+                               (:typemodifiers ("public")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [2769 2932])
+                            ("remove" function
+                               (:typemodifiers ("public")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2952 3004])
+                            ("next" function
+                               (:typemodifiers ("public")
+                                :type "Integer")
+                                (reparse-symbol class_member_declaration) [3014 3305]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2581 3311])
+                    ("print" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("iterator" variable (:type "DataStructureIterator") (reparse-symbol formal_parameters) [3339 3369]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3321 3494])
+                    ("get" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol formal_parameters) [3516 3525]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3500 3569])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("s" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [3600 3610]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3576 4210]))                  
+                :type "class")
+                nil [1600 4212]))          
+    :file "DataStructure.java"
+    :pointmax 4213
+    :fsize 4212
+    :lastmodtime '(21485 19773 562060 634000)
+    :unmatched-syntax '((GT 2443 . 2444) (INTERFACE 2377 . 2386) (LT 2435 . 2436) (GT 2442 . 2443) (INTERFACE 2376 . 2385) (LT 2434 . 2435) (GT 2444 . 2445) (INTERFACE 2378 . 2387) (LT 2436 . 2437) (IDENTIFIER 1 . 3) (GT 2442 . 2443) (INTERFACE 2376 . 2385) (LT 2434 . 2435))
+    )
+   )
+  :file "!home!local!ANT!yiboj!Dropbox!AppFiles!JAVA!TEST!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
